@@ -8,12 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var pumpkinImageFront: UIImageView!
+    
+    @IBOutlet weak var pumpkinImageBottom: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        pumpkinImageFront.image = UIImage(imageLiteralResourceName: "Pumpkin left")
+        
+        pumpkinImageBottom.image =
+        UIImage(imageLiteralResourceName: "Pumpkin Bottom")
     }
 
-
+    @IBAction func rollButton(_ sender: UIButton) {
+        print("The button is clicked...")
+        pumpkinImageFront.image = UIImage(imageLiteralResourceName: "Pumpkin Bottom")
+        
+        pumpkinImageBottom.image =
+        UIImage(imageLiteralResourceName: "Pumpkin Right")
+    }
+    
 }
 
