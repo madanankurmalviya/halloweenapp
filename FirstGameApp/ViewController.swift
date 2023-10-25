@@ -11,21 +11,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var pumpkinImageFront: UIImageView!
     
     @IBOutlet weak var pumpkinImageBottom: UIImageView!
-    
+    var num = 0
+    let pumpkinImage = ["Pumpkin left","Pumpkin Right","Pumpkin Bottom","Pumpkin"]
+    let pumpkinBottom = ["Pumpkin Right","Pumpkin left","Pumpkin","Pumpkin Bottom"]
     override func viewDidLoad() {
-        super.viewDidLoad()
-        pumpkinImageFront.image = UIImage(imageLiteralResourceName: "Pumpkin left")
-        
-        pumpkinImageBottom.image =
-        UIImage(imageLiteralResourceName: "Pumpkin Bottom")
+
     }
 
     @IBAction func rollButton(_ sender: UIButton) {
-        print("The button is clicked...")
-        pumpkinImageFront.image = UIImage(imageLiteralResourceName: "Pumpkin Bottom")
-        
-        pumpkinImageBottom.image =
-        UIImage(imageLiteralResourceName: "Pumpkin Right")
+        if num < pumpkinImage.count {
+            print("The button is clicked.../(num): ",num);
+            pumpkinImageFront.image = UIImage(imageLiteralResourceName: pumpkinImage[num])
+            pumpkinImageBottom.image = UIImage(imageLiteralResourceName: pumpkinBottom[num])
+            num  = num + 1
+        }else {
+            num = 0
+        }
     }
     
 }
