@@ -51,8 +51,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="abcf" destination="ib0-H9-Gjx" id="cOU-iU-k8P"/>
                         <outlet property="pumpkinImageBottom" destination="ib0-H9-Gjx" id="I0m-oX-53e"/>
-                        <outlet property="pumpkinImageFront" destination="X9y-Za-hnH" id="C45-t2-vNZ"/>
+                        <outlet property="pumpkinImageFront" destination="X9y-Za-hnH" id="suY-rW-PqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
